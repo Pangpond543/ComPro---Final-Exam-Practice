@@ -1,2 +1,6 @@
-sort_ = sorted("words")
-print(sort_)
+s = "abcd"
+
+for i in range(1 , len(s) + 1):
+    print(s[:i])
+    print(i)
+    
