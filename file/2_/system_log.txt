@@ -1,0 +1,5 @@
+[2026-10-10] [INFO] User logged in 
+[2026-10-10] [ERROR] Database connection failed 
+[2026-10-10] [WARNING] Disk space low 
+[2026-10-10] [ERROR] File not found 
+[2026-10-10] [INFO] User logged out
