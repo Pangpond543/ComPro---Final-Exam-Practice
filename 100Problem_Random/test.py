@@ -1,6 +1,6 @@
-s = "abcd"
+dict_ = {"K": {2:"I", 3:"o"}}
 
-for i in range(1 , len(s) + 1):
-    print(s[:i])
-    print(i)
+
+
+print(len(dict_["K"]))
     
