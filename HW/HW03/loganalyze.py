@@ -12,12 +12,12 @@ def analyze_user_activity(log_file_path: str) -> dict:
             user.add(split_[1])
             
             action_[split_[2]] = action_.get(split_[2], 0) + 1
-            active_[split_[1]] = active_.get(split_[1], 0) + int(split_[3])
-            
             try:
                 check_num = int(split_[3])
             except ValueError:
                 continue
+            
+            active_[split_[1]] = active_.get(split_[1], 0) + int(split_[3])
             
             if split_[2] == "login":
                 total += check_num
@@ -25,7 +25,7 @@ def analyze_user_activity(log_file_path: str) -> dict:
         
         login_check = action_.get("login", 0)
         most = max(active_, key=active_.get) if active_ else None
-        average = total/action_["login"] if login_check >= 0 else 0.0
+        average = total/action_["login"] if login_check > 0 else 0.0
         
         return {
             "total_users": len(user),

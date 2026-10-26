@@ -25,7 +25,6 @@ for s in set_:
 print(only_)
 
 # * **Out of Stock Report:** สร้าง Dictionary ใหม่ที่เก็บเฉพาะรายการสินค้าที่ **หมดสต็อก (จำนวน = 0)** แยกตามสาขา (สาขาไหนไม่มีสินค้าหมดสต็อก ไม่ต้องใส่มาใน Dictionary)
-
 result = {}
 for bra, pro in branches.items():
     stock_0 = []
@@ -36,4 +35,8 @@ for bra, pro in branches.items():
         result[bra] = stock_0
 
 print(result)
+
+# {'Laptop', 'Webcam', 'Keyboard', 'Monitor', 'Mouse', 'Headphones'}
+# {'Webcam'}
+# {'Branch_A': ['Monitor'], 'Branch_C': ['Headphones']}
             
